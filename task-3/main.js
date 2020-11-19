@@ -1,5 +1,6 @@
-var num = '52';
+var name = prompt('enter name');
+var age = prompt('enter age');
 
-var result = +num;
+var str = `name: ${name} age: ${age}`;
 
-alert(typeof(result));
+alert(str);
