@@ -22,7 +22,6 @@ function render(str) {
     conteiner.innerHTML = `<li>${word2}</li>
                             <li>${word1}</li>`
 
-
 }
 
 render(resFunc);
