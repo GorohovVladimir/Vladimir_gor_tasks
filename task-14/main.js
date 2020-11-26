@@ -7,7 +7,7 @@ var resArrLink = arrLink();
 
 function myFunc() {
   resArrLink.push('com');
-  resArrLink.unshift('http');
+  resArrLink.splice(0, 0, 'http');
  
 var strMyFunc = resArrLink.join('');
 
