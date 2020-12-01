@@ -23,7 +23,7 @@ function myArr()  {
 
 var resFunc = myArr(myJoin);
 
-var result = resFunc.split(' ');
+var result = resFunc.split(' ').slice(0, -1);
 
 console.log(result);
 

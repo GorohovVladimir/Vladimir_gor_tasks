@@ -7,7 +7,7 @@ var myArr = arrError();
 
 function arrRight() { 
 
-    var ArrToStr = myArr.join(', ');
+    var ArrToStr = myArr.join(' ');
     var str = ''
 
     for(var char of ArrToStr){
@@ -17,7 +17,7 @@ function arrRight() {
             str += `${char}`;
         }
     }
-    var strToArr = str.split(',')
+    var strToArr = str.split(' ')
     return console.log(strToArr);
 }
 
