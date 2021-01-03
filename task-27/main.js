@@ -1,5 +1,9 @@
 
-var enterText = prompt('Enter list words and pattern wrapper');
+  
+  
+  (function(){
+
+  var enterText = prompt('Enter list words and pattern wrapper');
 
   var textToArrey = enterText.split('*')
 
@@ -23,6 +27,7 @@ var enterText = prompt('Enter list words and pattern wrapper');
   var container = document.querySelector('#container__names');
 
   container.innerHTML = res;
+})();
 
   
 
