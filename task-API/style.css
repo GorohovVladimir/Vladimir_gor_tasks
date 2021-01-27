@@ -1,0 +1,40 @@
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+
+    
+}
+
+#user__list{
+    border: 1px solid black;
+    max-width: 250px;
+    margin: 10px;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: rgb(178, 200, 241);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+#button{
+    border-radius: 5px;
+    background-color: rgb(185, 252, 86);
+    width: 70px;
+}
+
+.name{
+    margin-left: 15px;
+    width: 100%;
+}
