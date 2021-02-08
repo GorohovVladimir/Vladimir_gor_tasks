@@ -1,74 +1,87 @@
 
-//     (function(){
-//         function renderUsers(){
-//         var apiKey = 'd6e6810da50cf5860600afb17d27aca9';
-//         var baseUrl = 'http://learn.api.axenov-it.com/users';
-
-//         var url = `${baseUrl}?api_key=${apiKey}`;
-            
-//         var request = new XMLHttpRequest();
-
-//             request.onload = function () {
-//                 var users = JSON.parse(request.response);
-            
-//                 var list = document.querySelector('.conteiner');
-
-//                 var html = '';
-//                 var i = 1;
-
-//             for(user of users){
-//                 html += `<div id='user__list'>${i++}.<span class='name'>${user.name}</span> <button id='button'>Show</button></div>`
-
-//             }
-//             list.innerHTML = html;
-//         }
-//         request.open('GET', url);
-
-//         request.send();
-//     }
-//     renderUsers();
-// })();
-
 (function(){
     function renderUsers(){
+        
         var apiKey = 'd6e6810da50cf5860600afb17d27aca9';
         var baseUrl = 'http://learn.api.axenov-it.com/users';
         var url = `${baseUrl}?api_key=${apiKey}`;
 
+        var container = document.querySelector('.user__list');
+        
+
         var request = new XMLHttpRequest();
 
+        request.open('GET', url);
+            request.send(); 
+
+            function btnClick(){
+                var btnEl = this;
+                if(btnEl.innerText === 'Show'){
+                    btnEl.innerText = 'Hide'
+                }
+                else{
+                   btnEl.innerText = 'Show' 
+                }
+
+                var el = this.parentNode.nextElementSibling;
+               if(el.classList.contains('hide')){
+                this.parentNode.nextElementSibling.classList.replace('hide','open')
+               }
+               else{
+                this.parentNode.nextElementSibling.classList.replace('open','hide')
+               }
+            }
+
+        
+
         request.onload = function () {
+            
             var users = JSON.parse(request.response);
-            var listName = document.querySelector('.conteiner');
-            var listCard = document.querySelector('.user__card');
-            console.log(listCard);
-            var html1 = '';
-            var html2 = '';
+        
+            var listName = document.querySelector('.user__list');
+            
+            var html = '';
             var i = 1;
+            
 
             for(var user of users){
-                html1 += `<div id='user__list'>${i++}.
-                <span class='name'>${user.name}
-                </span> 
-                <button id='button'>Show</button>
-                        </div>` 
-                html2 += `<h3 class='title__card'>${user.name}</h3>
-                          <div>age:${user.age}</div>
-                          <div>gender:${user.gender}</div>
-                          <div>city:${user.city}</div>
-                          <div>address:${user.address}</div>
-                          <div>email:${user.email}</div>
-                          <div>companies:${user.companies}</div>
-                          <div>phones:${user.phones}</div>
-                          `           
-            }
-            listName.innerHTML = html1;
-            listCard.innerHTML = html2;
-        }
-        request.open('GET', url);
-        request.send();  
-    }
-  renderUsers();
 
-    
+                for(var company of user.companies){
+                    html += `<div id='user__list__name'>${i++}.
+                    <span class='user__name'>${user.name}
+                    </span> 
+                    <button id='user__button'>Show</button>
+                            </div> 
+                     <div class='user__card hide' data=${user._id}>
+                             <div call="user__photo">
+                              <img class='photo' src='Img/photo.jpg' alt="image"/>
+                             </div>
+                             <div class='user__description'>
+                             <h3> ${user.name}</h3>
+                              <ul class="user__description">
+                              <li><b>age:</b> ${user.age}</li>
+                              <li><b>gender:</b> ${user.gender}</li>
+                              <li><b>city:</b> ${user.city}</li>
+                              <li><b>address:</b> ${user.address}</li>
+                              <li><b>email:</b> ${user.email}</li>
+                               <li><b>companies:</b> ${company.name}(${company.address})</li>
+                              <li><b>phones:</b> ${user.phones}</li>
+                              </ul>
+                              </div>
+                              </div>
+                              `      
+                }
+                
+                        
+            }
+            listName.innerHTML = html;
+        
+            var allBtn = document.querySelectorAll('#user__button');
+            for(var btn of allBtn){
+                btn.onclick = btnClick;
+            }             
+    } 
+}
+renderUsers(); 
 })();
+

@@ -1,3 +1,10 @@
+
+li{
+    list-style: none;
+}
+
+
+
 .task__head {
     max-width: 900px;
     margin: auto;
@@ -6,16 +13,14 @@
     text-transform: uppercase;
 } 
 
-.conteiner {
+.container {
     margin: auto;
     border: 2px solid red;
     min-height: 600px;
-    max-width: 900px;
-
-    
+    max-width: 900px;   
 }
 
-#user__list{
+#user__list__name{
     border: 1px solid black;
     max-width: 250px;
     margin: 10px;
@@ -28,13 +33,38 @@
     font-size: 16px;
 }
 
-#button{
+#user__button{
     border-radius: 5px;
-    background-color: rgb(185, 252, 86);
+    background-color: rgb(205, 252, 135);
     width: 70px;
 }
 
-.name{
+.user__name{
     margin-left: 15px;
     width: 100%;
+}
+.user__card{
+    border: 1px solid black;
+    margin: 10px;
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgb(217, 247, 214);
+    margin-left: 312px;
+    display: flex;
+}
+
+.hide{
+display: none;
+}
+/* .open{
+    display: block;
+} */
+
+.photo{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.user__header{
+    margin-left: 37px;
 }
