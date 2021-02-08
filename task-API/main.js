@@ -6,9 +6,6 @@
         var baseUrl = 'http://learn.api.axenov-it.com/users';
         var url = `${baseUrl}?api_key=${apiKey}`;
 
-        var container = document.querySelector('.user__list');
-        
-
         var request = new XMLHttpRequest();
 
         request.open('GET', url);
@@ -16,12 +13,10 @@
 
             function btnClick(){
                 var btnEl = this;
-                if(btnEl.innerText === 'Show'){
-                    btnEl.innerText = 'Hide'
-                }
-                else{
-                   btnEl.innerText = 'Show' 
-                }
+                if(btnEl.innerText === 'Show')btnEl.innerText = 'Hide'
+                   
+                else btnEl.innerText = 'Show' 
+                
 
                 var el = this.parentNode.nextElementSibling;
                if(el.classList.contains('hide')){
@@ -32,8 +27,7 @@
                }
             }
 
-        
-
+    
             request.onload = function () {
             
             var users = JSON.parse(request.response);
@@ -46,6 +40,7 @@
             for(var user of users){
 
                 
+
                     html += `<div id='user__list__name'>${i++}.
                     <span class='user__name'>${user.name}
                     </span> 
@@ -63,12 +58,16 @@
                               <li><b>city:</b> ${user.city}</li>
                               <li><b>address:</b> ${user.address}</li>
                               <li><b>email:</b> ${user.email}</li>
-                               <li><b>companies:</b> ${user.company}(${user.company})</li>
-                              <li><b>phones:</b> ${user.phones}</li>
+                               <li><b>companies:</b>`;
+                            for(var comp of user.companies){
+                                html += `${comp.name}${comp.address} </br>`;
+                            }
+                             html += ` </li>
+                              <li><b>phones:</b> ${user.phones}</br></li>
                               </ul>
                               </div>
-                              </div>
-                              `            
+                              </div>`;
+                                          
             }
 
             listName.innerHTML = html;
