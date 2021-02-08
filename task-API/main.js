@@ -42,11 +42,10 @@
             
             var html = '';
             var i = 1;
-            
-
+        
             for(var user of users){
 
-                for(var company of user.companies){
+                
                     html += `<div id='user__list__name'>${i++}.
                     <span class='user__name'>${user.name}
                     </span> 
@@ -57,23 +56,21 @@
                               <img class='photo' src='Img/photo.jpg' alt="image"/>
                              </div>
                              <div class='user__description'>
-                             <h3> ${user.name}</h3>
+                             <h3 class='user__header'> ${user.name}</h3>
                               <ul class="user__description">
                               <li><b>age:</b> ${user.age}</li>
                               <li><b>gender:</b> ${user.gender}</li>
                               <li><b>city:</b> ${user.city}</li>
                               <li><b>address:</b> ${user.address}</li>
                               <li><b>email:</b> ${user.email}</li>
-                               <li><b>companies:</b> ${company.name}(${company.address})</li>
+                               <li><b>companies:</b> ${user.company}(${user.company})</li>
                               <li><b>phones:</b> ${user.phones}</li>
                               </ul>
                               </div>
                               </div>
-                              `      
-                }
-                
-                        
+                              `            
             }
+
             listName.innerHTML = html;
         
             var allBtn = document.querySelectorAll('#user__button');
