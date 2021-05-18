@@ -1,0 +1,31 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    /* display: flex; */
+    justify-content: center;  
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.input{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.input-text{
+    width: 500px;
+    margin-left: 200px;
+
+}

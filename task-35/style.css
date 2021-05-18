@@ -1,0 +1,49 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+/* .conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+} */
+.vasya{
+    margin-top:50px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(245, 245, 88);
+    border-radius: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    
+}
+.go{
+    height: 40px;
+    width: 100px;
+    color: white;
+    background: black;
+    border-radius: 10px;
+}
+/* .run{
+    animation: translating 10s linear 0s infinite;
+    margin-top:50px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(245, 245, 88);
+    border-radius: 100px;
+    top: 100px;
+    left: 0;
+    transform: translate(10px);
+} */

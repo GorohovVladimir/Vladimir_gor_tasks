@@ -1,0 +1,45 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;  
+}
+
+.checkbox-list {
+    display: flex;    
+}
+
+.checkbox-list .checked .icon::before {
+    content:'\2713';
+    display:inline-block;
+    color:red;
+    font-size: 45px;
+
+}
+
+.checkbox-list .checkbox .icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    display: block;
+    margin-right: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

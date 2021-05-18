@@ -1,0 +1,32 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    /* display: flex; */
+    justify-content: center;  
+}
+.select{
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+    margin: 10px;;
+    padding: 15px;
+    border: 2px solid rgb(228, 226, 226);
+}

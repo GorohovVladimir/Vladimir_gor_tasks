@@ -1,0 +1,126 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: 0 auto;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -152px;
+    margin-top: -152px; 
+    /* padding: 5px;  */
+}
+.top {
+    position: absolute;
+    top: 0;
+    margin-top: 0px;
+    left: 50%;
+    margin-left: -152px;
+}
+.left {
+    position: absolute;
+    left: 0;
+    margin-left: 0px;
+    top:50%;
+    margin-top: -152px;
+}
+.right {
+    position: absolute;
+    top:50%;
+    margin-top: -152px;
+    left: 100%;
+    margin-left: -304px;
+}
+.bottom {
+    position: absolute;
+    top: 100%;
+    margin-top: -304px;
+    left: 50%;
+    margin-left: -152px;
+}
+
+.reset{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.reset:hover{
+    transform: rotate(180deg);
+    transition: 2s;
+    color:red;
+    font-size: 40px;
+}
+
+.arrow-top {
+    display: inline-block;
+    transform: rotate(180deg);
+    position: absolute;
+    top: -7px;
+    right: 135px;
+    font-size: 30px;
+    cursor: pointer;   
+}
+.arrow-top:hover {
+    color:springgreen;
+    transition: 0.5s;
+}
+.arrow-left {
+    display: inline-block;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 135px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.arrow-left:hover {
+    color:springgreen;
+    transition: 0.5s;
+}
+.arrow-bottom {
+    display: inline-block;
+    position: absolute;
+    top: 267px;
+    right: 135px;
+    font-size: 30px;
+    cursor: pointer;    
+}
+.arrow-bottom:hover {
+    color:springgreen;
+    transition: 0.5s;
+}
+.arrow-right {
+    display: inline-block;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 135px;
+    right: 0;
+    font-size: 35px;
+    cursor: pointer;
+}
+.arrow-right:hover {
+    color:springgreen;
+    transition: 0.5s;
+}
+
+
+
+
+

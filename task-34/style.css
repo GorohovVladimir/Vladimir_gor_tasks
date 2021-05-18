@@ -1,0 +1,27 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#slider{
+    width: 400px;
+    border: 2px solid rgb(224, 248, 180);
+}
+
+.slider__image{
+    width: 100%;  
+}

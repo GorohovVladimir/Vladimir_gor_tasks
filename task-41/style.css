@@ -1,0 +1,58 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;   */
+    align-items: center;
+   
+
+}
+
+.arrow {
+    font-size: 45px;
+    color: red;
+    cursor: pointer;
+    transition: 2s;
+    
+}
+
+.transform {
+    transform: rotate(180deg);
+    transition: 2s;
+}
+
+
+
+.content-hide{
+    display: inline;
+    width: 220px;
+    height: 0px;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.show{
+    border: 2px solid red;
+     height: 250px;     
+}
+
+
+
+
+
+

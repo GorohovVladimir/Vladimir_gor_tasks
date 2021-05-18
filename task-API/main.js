@@ -27,7 +27,6 @@
                }
             }
 
-    
             request.onload = function () {
             
             var users = JSON.parse(request.response);

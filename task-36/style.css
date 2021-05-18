@@ -1,0 +1,39 @@
+
+.task__head {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+} 
+
+.conteiner {
+    margin: auto;
+    border: 2px solid red;
+    min-height: 600px;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;  
+}
+.form{
+    margin-top: 25px;
+}
+.form__input{
+    width: 300px;
+    height: 30px;
+}
+.form__button{
+    width: 100px;
+    height: 36px;
+    margin-left: 15px;  
+}
+
+.contant-block{
+    border: 2px solid rgb(207, 204, 204);
+    margin-top: 25px;
+    height: 30px;
+    line-height: 0;
+}
+.contant-text{
+    margin-left: 10px;
+}
